@@ -1,0 +1,19 @@
+body{
+    
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-box{
+    width: 20%;
+    height: 100%;
+}
+
+.pokeimage{
+
+}
+

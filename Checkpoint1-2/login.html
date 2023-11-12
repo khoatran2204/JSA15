@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="body-login">
+        <div class="body_login">
+            <h2 class="sub">ĐĂNG NHẬP</h2>
+            <form action="" class="">
+                <div>
+                    <div class="input">
+                        <label class="input-label">Email</label>
+                        <input type="text" class="input-field" name="" id="Username">
+                    </div>
+                    <div class="input">
+                        <label class="input-label">Mật khẩu</label>
+                        <input type="text" class="input-field" name="" id="Password">
+                    </div>
+                </div>
+            </form>
+            <div class="action">
+                <button class="action-button" id="button">Đăng nhập vào</button>
+            </div>
+            <a class="link" href="signup.html">(*) Chưa có tài khoản ? </a>
+        </div>
+    </div>
+    <script src="script.js">
+        let input = document.getElementById('input')
+let button = document.getElementById('button')
+let todo = document.getElementById('todo')
+
+let todoList = []
+
+button.addEventListener('click', (event) =>{
+    event.preventDefault()
+    addTodo()
+})
+
+const addTodo = () => {
+    const newToDo = input.value 
+    if (!newToDo) return console.log("Nhập vô đi rồi add") || alert("Nhập vô đi rồi add")
+    todoList.push({
+        name: newToDo,
+        completed: false
+    })
+    localStorage.setItem('todos', JSON.stringify(todoList))
+
+    render()
+}
+
+const render = () =>{
+    todo.innerHTML=null
+    todoList = JSON.parse(localStorage.getItem('todos')) || []
+
+    for (let i = 0; i < todoList.length; i++){
+        let item = document.createElement("li")
+        item.innerHTML = todoList[i].name
+        console.log(todo)
+        todo.appendChild(item)
+        item.style.display = "inline-block"
+
+        let div = document.createElement("div")
+
+        let checkbox = document.createElement("input")
+        checkbox.setAttribute("type","checkbox")
+        div.appendChild(checkbox)
+        
+        let btn = document.createElement("button")
+        let text = document.createTextNode("X")
+        btn.classList.add("deleteBtn")
+        btn.appendChild(text)
+        div.appendChild(btn)
+        item.appendChild(div)
+    }
+}
+render()
+
+checkbox.addEventListener('click', ()=>{
+    for (let i = 0; i < todoList.length; i++){
+        if (checkbox.checked == true){
+            todoList[i].completed = "true"
+            console.log("true")
+        }
+        else {
+            todoList[i].completed = "false"
+            console.log("false")
+        }
+    }
+})
+
+
+item.style.textDecorationLine = "line-through"
+
+erase.addEventListener("mouseover", ()=>{
+    erase.style.background = "grey"
+})
+
+erase.addEventListener("click")
+    </script>
+    
+</body>
