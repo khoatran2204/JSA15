@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/pagination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        
+
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
+
 <body>
     <div class="navigation">
         <div class="navigation-box">
@@ -27,7 +30,7 @@
             <button class="Button" id="search">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </button>
-            
+
             <button class="Button" id="shop">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
@@ -43,7 +46,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="gallery">
         <div class="swiper gallery-cards">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -147,17 +149,24 @@
         </div>
     </div> -->
 
-<img class="slides" src="image/1700669802461_15promax_18.jpg" width="80%">
-<img class="slides" src="image/1700723051291_824x400_04.jpg" width="80%">
-<img class="slides" src="image/1700724281889_824x400_06.jpg" width="80%">
-<script>
-w3.slideshow(".slides", 1500);
-</script>
-
-    <div class="box-container" id="products"></div>
-
+    <img class="slides" src="image/1700669802461_15promax_18.jpg" width="80%">
+    <img class="slides" src="image/1700723051291_824x400_04.jpg" width="80%">
+    <img class="slides" src="image/1700724281889_824x400_06.jpg" width="80%">
+    <script>
+        w3.slideshow(".slides", 1500);
+    </script>
+    <div class="data-container">
+        <div class="box-container" id="products"></div>
+        <div id="pagination">
+            <button id="prev-page">Trang Trước</button>
+            <span id="current-page">1</span>
+            <button id="next-page">Trang Sau</button>
+        </div>
+    </div>
 </body>
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/pagination.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </html>

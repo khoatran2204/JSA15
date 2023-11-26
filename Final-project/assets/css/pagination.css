@@ -1,0 +1,11 @@
+#products {
+    margin-bottom: 20px;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 5px;
+}
