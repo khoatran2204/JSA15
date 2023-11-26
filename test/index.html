@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Position the image container (needed to position the number elements) */
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Position the number elements */
+        .number {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img id="slideImage" src="https://via.placeholder.com/300" alt="Slide 1">
+    <p class="number" id="phoneNumber"></p>
+</div>
+
+<script>
+    let slides = [
+        {image: "https://via.placeholder.com/300", number: "+1 234 567 890"},
+        {image: "https://via.placeholder.com/300", number: "+1 234 567 891"},
+        {image: "https://via.placeholder.com/300", number: "+1 234 567 892"}
+    ];
+
+    let slideIndex = 0;
+
+    function showSlide() {
+        document.getElementById("slideImage").src = slides[slideIndex].image;
+        document.getElementById("phoneNumber").innerHTML = slides[slideIndex].number;
+    }
+
+    // Show the first slide when the page loads
+    showSlide();
+
+    // Use the following code to create a slideshow
+    /*
+    let slideInterval = setInterval(function() {
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        showSlide();
+    }, 3000); // Change the interval (3000) to adjust the time between slides
+    */
+</script>
+
+</body>
+</html>

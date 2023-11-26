@@ -5,10 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
-    <a class="link" href="signup.html">Đăng kí</a>
-    <a class="link" href="signin.html">Đăng nhập</a>
+    <div class="navigation">
+        <div class="navigation-box">
+            <div>TRANG CHỦ</div>
+            <div id="Phone">ĐIỆN THOẠI</div>
+            <div>GIỎ HÀNG</div>
+        </div>
+        <div class="icon">
+            <input type="text" name="search-city" id="search-input" placeholder="Tìm kiếm">
+            <button class="Button" id="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+            
+            <button class="Button" id="shop">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <div>
+                <button class="Button" id="signin-signup">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </button>
+                <div id="dropdown">
+                    <a class="dropdown-content" href="signin.html">Sign In</a>
+                    <a class="dropdown-content" href="signup.html">Sign Up</a>
+                </div>
+                <div id="logout" class="dropdown-content">Log Out</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="gallery">
+        <div class="swiper gallery-cards">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <article class="gallery__card">
+                        <img src="assets/img/img1.png" alt="image gallery" class="gallery__img">
+                        <div class="gallery__data">
+                            <h3 class="gallery__title">Ornament Vase</h3>
+                            <span class="gallery__subtitle">Modern</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="gallery__card">
+                        <img src="assets/img/img2.png" alt="image gallery" class="gallery__img">
+                        <div class="gallery__data">
+                            <h3 class="gallery__title">Ornament Vase</h3>
+                            <span class="gallery__subtitle">Modern</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="gallery__card">
+                        <img src="assets/img/img3.png" alt="image gallery" class="gallery__img">
+                        <div class="gallery__data">
+                            <h3 class="gallery__title">Ornament Vase</h3>
+                            <span class="gallery__subtitle">Modern</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="gallery__card">
+                        <img src="assets/img/img4.png" alt="image gallery" class="gallery__img">
+                        <div class="gallery__data">
+                            <h3 class="gallery__title">Ornament Vase</h3>
+                            <span class="gallery__subtitle">Modern</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="gallery__card">
+                        <img src="assets/img/img5.png" alt="image gallery" class="gallery__img">
+                        <div class="gallery__data">
+                            <h3 class="gallery__title">Ornament Vase</h3>
+                            <span class="gallery__subtitle">Modern</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gallery__overflow">
+            <div class="swiper gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery__thumbnail">
+                            <img src="assets/img/img1.png" alt="image thumbnail" class="gallery__thumbnail-img">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="gallery__thumbnail">
+                            <img src="assets/img/img2.png" alt="image thumbnail" class="gallery__thumbnail-img">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="gallery__thumbnail">
+                            <img src="assets/img/img3.png" alt="image thumbnail" class="gallery__thumbnail-img">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="gallery__thumbnail">
+                            <img src="assets/img/img4.png" alt="image thumbnail" class="gallery__thumbnail-img">
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="gallery__thumbnail">
+                            <img src="assets/img/img5.png" alt="image thumbnail" class="gallery__thumbnail-img">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-line"></i>
+            </div>
+        </div>
+    </div> -->
+
+<img class="slides" src="image/1700669802461_15promax_18.jpg" width="80%">
+<img class="slides" src="image/1700723051291_824x400_04.jpg" width="80%">
+<img class="slides" src="image/1700724281889_824x400_06.jpg" width="80%">
+<script>
+w3.slideshow(".slides", 1500);
+</script>
+
+    <div class="box-container" id="products"></div>
+
 </body>
 <script src="script.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </html>
