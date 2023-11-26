@@ -31,13 +31,13 @@ function displayData(data) {
         container.appendChild(productName)
 
         let price = document.createElement("h6")
-        price.innerHTML = i.price + "đ"
+        price.innerHTML = i.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "đ"
         container.appendChild(price)
         price.style.color = "red"
         price.style.fontSize = "20px"
 
         let nomalprice = document.createElement("h6")
-        nomalprice.innerHTML = i.list_price + "đ"
+        nomalprice.innerHTML = i.list_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "đ"
         container.appendChild(nomalprice)
         nomalprice.style.textDecoration = "line-through"
 

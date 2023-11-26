@@ -103,7 +103,7 @@ body {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   grid-column-gap: 1em;
   grid-row-gap: 1em;
   padding: 8em 0;
