@@ -54,27 +54,27 @@ document.getElementById("search").addEventListener("click", () => {
 
 let user = ""
 
-let SigninSignup = document.getElementById("signin-signup")
-if ((SigninSignup != null) && (!user)) {
-    SigninSignup.addEventListener('click', () => {
-        const dropdown = document.getElementById('dropdown');
-        if (dropdown.style.display == "none") dropdown.style.display = "block"
-        else dropdown.style.display = "none"
-    });
-} else if ((SigninSignup != null) && (user != null)) {
-    SigninSignup.addEventListener('click', () => {
-        const logout = document.getElementById('logout');
-        if (logout.style.display == "none") logout.style.display = "block"
-        else logout.style.display = "none"
-    });
-}
-let logout = document.getElementById('logout')
-if (logout != null) {
-    logout.addEventListener('click', () => {
-        user = ""
-        window.location.href = "./index.html"
-    })
-}
+// let SigninSignup = document.getElementById("signin-signup")
+// if ((SigninSignup != null) && (!user)) {
+//     SigninSignup.addEventListener('click', () => {
+//         const dropdown = document.getElementById('dropdown');
+//         if (dropdown.style.display == "none") dropdown.style.display = "block"
+//         else dropdown.style.display = "none"
+//     });
+// } else if ((SigninSignup != null) && (user != null)) {
+//     SigninSignup.addEventListener('click', () => {
+//         const logout = document.getElementById('logout');
+//         if (logout.style.display == "none") logout.style.display = "block"
+//         else logout.style.display = "none"
+//     });
+// }
+// let logout = document.getElementById('logout')
+// if (logout != null) {
+//     logout.addEventListener('click', () => {
+//         user = ""
+//         window.location.href = "./index.html"
+//     })
+// }
 
 fetch('https://ecomws.didongviet.vn/fe/v1/flash-sales')
     .then(response => response.json())

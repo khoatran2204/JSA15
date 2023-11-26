@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/pagination.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pagination.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slideshow.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
@@ -34,132 +36,34 @@
             <button class="Button" id="shop">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
-            <div>
+            <div id="auth-button">
                 <button class="Button" id="signin-signup">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </button>
                 <div id="dropdown">
-                    <a class="dropdown-content" href="signin.html">Sign In</a>
-                    <a class="dropdown-content" href="signup.html">Sign Up</a>
+                    <div id="login" class="dropdown-content">Log In</div>
+                    <div id="login" class="dropdown-content">Sign Up</div>
+                    <div id="logout" class="dropdown-content">Log Out</div>
                 </div>
-                <div id="logout" class="dropdown-content">Log Out</div>
             </div>
         </div>
     </div>
-        <div class="swiper gallery-cards">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <article class="gallery__card">
-                        <img src="assets/img/img1.png" alt="image gallery" class="gallery__img">
-                        <div class="gallery__data">
-                            <h3 class="gallery__title">Ornament Vase</h3>
-                            <span class="gallery__subtitle">Modern</span>
-                        </div>
-                    </article>
-                </div>
 
-                <div class="swiper-slide">
-                    <article class="gallery__card">
-                        <img src="assets/img/img2.png" alt="image gallery" class="gallery__img">
-                        <div class="gallery__data">
-                            <h3 class="gallery__title">Ornament Vase</h3>
-                            <span class="gallery__subtitle">Modern</span>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="gallery__card">
-                        <img src="assets/img/img3.png" alt="image gallery" class="gallery__img">
-                        <div class="gallery__data">
-                            <h3 class="gallery__title">Ornament Vase</h3>
-                            <span class="gallery__subtitle">Modern</span>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="gallery__card">
-                        <img src="assets/img/img4.png" alt="image gallery" class="gallery__img">
-                        <div class="gallery__data">
-                            <h3 class="gallery__title">Ornament Vase</h3>
-                            <span class="gallery__subtitle">Modern</span>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="gallery__card">
-                        <img src="assets/img/img5.png" alt="image gallery" class="gallery__img">
-                        <div class="gallery__data">
-                            <h3 class="gallery__title">Ornament Vase</h3>
-                            <span class="gallery__subtitle">Modern</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="gallery__overflow">
-            <div class="swiper gallery-thumbs">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="gallery__thumbnail">
-                            <img src="assets/img/img1.png" alt="image thumbnail" class="gallery__thumbnail-img">
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="gallery__thumbnail">
-                            <img src="assets/img/img2.png" alt="image thumbnail" class="gallery__thumbnail-img">
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="gallery__thumbnail">
-                            <img src="assets/img/img3.png" alt="image thumbnail" class="gallery__thumbnail-img">
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="gallery__thumbnail">
-                            <img src="assets/img/img4.png" alt="image thumbnail" class="gallery__thumbnail-img">
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-slide">
-                        <div class="gallery__thumbnail">
-                            <img src="assets/img/img5.png" alt="image thumbnail" class="gallery__thumbnail-img">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="swiper-pagination"></div>
-            </div>
-
-
-            <div class="swiper-button-next">
-                <i class="ri-arrow-right-line"></i>
-            </div>
-            <div class="swiper-button-prev">
-                <i class="ri-arrow-left-line"></i>
-            </div>
-        </div>
-    </div> -->
-
-    <img class="slides" src="image/1700669802461_15promax_18.jpg" width="80%">
-    <img class="slides" src="image/1700723051291_824x400_04.jpg" width="80%">
-    <img class="slides" src="image/1700724281889_824x400_06.jpg" width="80%">
+    <div class="banner-container">
+        <img class="slides" src="image/1700669802461_15promax_18.jpg" width="80%">
+        <img class="slides" src="image/1700723051291_824x400_04.jpg" width="80%">
+        <img class="slides" src="image/1700724281889_824x400_06.jpg" width="80%">
+    </div>
     <script>
         w3.slideshow(".slides", 1500);
     </script>
     <div class="data-container">
         <div class="box-container" id="products"></div>
         <div id="pagination">
-            <button id="prev-page">Trang Trước</button>
-            <span id="current-page">1</span>
+            <button id="prev-page" class="disabled">Trang Trước</button>
+            <button id="first" class="active">1</button>
+            <button id="second">2</button>
+            <button id="third">3</button>
             <button id="next-page">Trang Sau</button>
         </div>
     </div>
@@ -168,5 +72,6 @@
 <script src="assets/js/pagination.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/home.js"></script>
 
 </html>

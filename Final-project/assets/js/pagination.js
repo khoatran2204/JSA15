@@ -66,12 +66,52 @@ function setupPagination() {
     });
 }
 
+function updatePagination(currentPage) {
+    const prevButton = document.getElementById('prev-page');
+    const nextButton = document.getElementById('next-page');
+
+    const firstPage = document.getElementById('first');
+    const secondPage = document.getElementById('second');
+    const thirdPage = document.getElementById('third');
+
+    if (currentPage == 1) {
+        prevButton.classList.add("disabled");
+        firstPage.classList.add("active");
+        firstPage.innerText = currentPage;
+        secondPage.classList.remove("active");
+        secondPage.innerText = currentPage + 1;
+        thirdPage.innerText = currentPage + 2;
+    } else {
+        prevButton.classList.remove("disabled");
+        firstPage.classList.remove("active");
+        firstPage.innerText = currentPage - 1;
+        secondPage.classList.add("active");
+        secondPage.innerText = currentPage;
+        thirdPage.innerText = currentPage + 1;
+    }
+}
+
 function fetchDataAndDisplay() {
     fetchData(currentPage).then(data => {
         displayData(data);
-        document.getElementById('current-page').innerText = currentPage;
+        updatePagination(currentPage);
     });
 }
+
+document.getElementById('first').addEventListener('click', () => {
+    currentPage = parseInt(document.getElementById('first').innerText);
+    fetchDataAndDisplay();
+});
+
+document.getElementById('second').addEventListener('click', () => {
+    currentPage = parseInt(document.getElementById('second').innerText);
+    fetchDataAndDisplay();
+});
+
+document.getElementById('third').addEventListener('click', () => {
+    currentPage = parseInt(document.getElementById('third').innerText);
+    fetchDataAndDisplay();
+});
 
 fetchDataAndDisplay();
 setupPagination();

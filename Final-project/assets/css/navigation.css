@@ -1,0 +1,128 @@
+.navigation-box div:hover {
+    background-color: grey;
+    color: #110f29;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    background-color: #1C1C1C;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    color: #FFFFFF;
+}
+
+.navigation-box {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-box div {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation-box div:hover {
+    background-color: #333;
+    color: #FFFFFF;
+}
+
+.dropdown-content {
+    background-color: #1C1C1C;
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.dropdown-content:hover {
+    background-color: #333;
+}
+
+#search-input {
+    padding: 8px 15px;
+    margin-right: -4px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #333;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+}
+
+.Button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    border: none;
+}
+
+.Button:hover {
+    background-color: #45a049;
+}
+
+.icon button {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icon button:hover {
+    background-color: #333;
+}
+
+@media screen and (max-width: 720px) {
+    .navigation {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navigation-box,
+    .icon {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .icon {
+        order: -1;
+    }
+}
+.icon {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-content {
+    color: #333;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content:hover {
+    background-color: #f6f6f6;
+    color: #333;
+    cursor: pointer;
+}
+
+#auth-button:hover #dropdown,
+#dropdown:hover {
+    display: flex;
+    flex-direction: column;
+}
