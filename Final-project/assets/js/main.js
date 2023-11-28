@@ -24,3 +24,4 @@ let swiperThumbs = new Swiper(".gallery-thumbs", {
 });
 
 swiperThumbs.controller.control = swiperCards;
+

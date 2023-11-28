@@ -31,13 +31,13 @@ function displayData(data) {
         container.appendChild(productName)
 
         let price = document.createElement("h6")
-        price.innerHTML = i.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "đ"
+        price.innerHTML = i.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ"
         container.appendChild(price)
         price.style.color = "red"
         price.style.fontSize = "20px"
 
         let nomalprice = document.createElement("h6")
-        nomalprice.innerHTML = i.list_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "đ"
+        nomalprice.innerHTML = i.list_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ"
         container.appendChild(nomalprice)
         nomalprice.style.textDecoration = "line-through"
 
@@ -61,8 +61,10 @@ function setupPagination() {
     });
 
     document.getElementById('next-page').addEventListener('click', () => {
+        if (currentPage < 13){
         currentPage += 1;
         fetchDataAndDisplay();
+        }
     });
 }
 
@@ -81,13 +83,23 @@ function updatePagination(currentPage) {
         secondPage.classList.remove("active");
         secondPage.innerText = currentPage + 1;
         thirdPage.innerText = currentPage + 2;
-    } else {
+    } else if (currentPage == 13){
+        nextButton.classList.add("disabled");
+        firstPage.innerText = currentPage - 2;
+        secondPage.classList.remove("active");
+        secondPage.innerText = currentPage - 1;
+        thirdPage.innerText = currentPage;
+        thirdPage.classList.add("active");
+    }
+    else {
         prevButton.classList.remove("disabled");
+        nextButton.classList.remove("disabled")
         firstPage.classList.remove("active");
         firstPage.innerText = currentPage - 1;
         secondPage.classList.add("active");
         secondPage.innerText = currentPage;
         thirdPage.innerText = currentPage + 1;
+        thirdPage.classList.remove("active")
     }
 }
 
@@ -115,3 +127,6 @@ document.getElementById('third').addEventListener('click', () => {
 
 fetchDataAndDisplay();
 setupPagination();
+
+
+

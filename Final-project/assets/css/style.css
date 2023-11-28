@@ -152,6 +152,7 @@ img {
   border: solid 2px black;
   cursor: pointer;
   transition: transform 0.6s;
+  
 }
 
 .addButton:hover {

@@ -125,4 +125,10 @@
 #dropdown:hover {
     display: flex;
     flex-direction: column;
+    
+}
+
+#user{
+    display: inline;
+    cursor: pointer;
 }
