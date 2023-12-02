@@ -27,4 +27,5 @@ submit.addEventListener('click', (e) => {
         password
     });
     localStorage.setItem('users', JSON.stringify(users));
+    window.location.href = 'signin.html';
 });

@@ -282,3 +282,26 @@ img {
   flex-direction: row;
   justify-content: space-around;
 }
+
+.footer{
+  background-color: black;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer a{
+  color: #eee;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 40px 40px;
+}
+
+.footer a:hover{
+  color: #777f85;
+}
+
+.footer i{
+  font-size: 40px;
+}
