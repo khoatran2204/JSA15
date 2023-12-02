@@ -41,7 +41,7 @@ function displayData(data) {
     price.style.color = "red";
     price.style.fontSize = "20px";
 
-    let nomalprice = document.createElement("h6");
+    let nomalprice = document.createElement("h7");
     nomalprice.innerHTML =
       i.list_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + "đ";
     container.appendChild(nomalprice);

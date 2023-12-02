@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  background-color: #f1f1f1;
 }
 
 /* shop*/
@@ -112,17 +113,21 @@ body {
 .card {
   background-color: #ffffff;
   max-width: 18em;
-  padding: 1em;
   border-radius: 5px;
   box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 1s;
+
+}
+.card:hover{
+  transform: scale(1.03);
+  
 }
 
-.image-container {
-  text-align: center;
-}
 
 img {
-  max-width: 100%;
+  
   object-fit: contain;
   height: 15em;
 }
@@ -130,33 +135,47 @@ img {
 .container {
   padding-top: 1em;
   color: #110f29;
+  background-color: #F5F5F5;
+  
 }
 
 .container h5 {
-  font-size: 20px;
+  font-size: 17px;
+  background-color: #F5F5F5;
+  margin-left: 5px;
 }
 
 .container h6 {
-  font-size: 15px;
+  font-size: 13px;
+  background-color: #F5F5F5;
+  margin-left: 5px;
+
 }
+.container h7 {
+  font-size: 16px;
+  margin-left: 5px;
+  border-bottom: black solid 1px;
+  padding-right: 100%;
+  background-color: #F5F5F5;
+}
+
 
 
 
 .addButton {
-  margin: 15px 20px 0px 20px;
-  background-color: #ffffff;
+  margin-top: 2%;
+  background-color: #F5F5F5;  
   border: none;
   padding: 8px 40px 8px 40px;
   font-size: 15px;
   font-weight: 500;
-  border: solid 2px black;
   cursor: pointer;
-  transition: transform 0.6s;
+  width: 100%;
   
 }
 
 .addButton:hover {
-  background-color: #110f29;
+  background-color: gray;
   color: white;
 }
 
