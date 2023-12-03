@@ -17,6 +17,7 @@ function displayData(data) {
   data.data.data.forEach((i) => {
     let card = document.createElement("div");
     card.classList.add("card");
+    card.addEventListener("click", () => infor(i))
 
     let imgContainer = document.createElement("div");
     imgContainer.classList.add("image-container");

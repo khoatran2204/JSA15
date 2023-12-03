@@ -3,11 +3,13 @@ function addToCart(item) {
     const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
     for (let i = 0; i < shoppingCart.length; i++) {
         if (item.product == shoppingCart[i].name) {
-            window.location.href = 'index.html';
-            
+            window.location.href = 'cart.html';
+            number += 1
+            return;
         }
     }
 
+    window.location.href = 'cart.html';
     shoppingCart.push({
         products: item.products,
         price: item.price,
